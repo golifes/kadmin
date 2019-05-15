@@ -8,5 +8,8 @@
   "redis": {
     "host": "",
     "pwd": ""
+  },
+  "jwt": {
+    "expire": 1000
   }
 }
