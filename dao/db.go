@@ -10,6 +10,6 @@ type DB struct {
 }
 
 func (d DB) initDb() {
-	config := config.GetGlobalConfig()
+	config := config.NewConfig()
 	d.Db = config.LoadDb()
 }

@@ -40,20 +40,20 @@ var (
 
 var global *Config
 
-func LoadGlobalConfig(path string) {
-	var once sync.Once
+func InitConfig(path string) error {
+
 	if global == nil {
 		global = &Config{}
 	}
+	var once sync.Once
 	once.Do(func() {
 		Load(path, &global)
 	})
-	global.loadDb()
-	//config.loadRedis()
-	//config.loadMgo()
+
+	return nil
 }
 
-func GetGlobalConfig() *Config {
+func NewConfig() *Config {
 	if global == nil {
 		return &Config{}
 	}
