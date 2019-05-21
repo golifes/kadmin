@@ -13,3 +13,4 @@ func (d DB) initDb() {
 	config := config.NewConfig()
 	d.Db = config.LoadDb()
 }
+t

@@ -1,0 +1,5 @@
+package icontext
+
+func NewTraceId() {
+
+}
